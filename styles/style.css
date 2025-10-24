@@ -120,3 +120,42 @@ body {
         styles/color with that of what's behind it to create some really cool effects */
     mix-blend-mode: difference;
 }
+
+.day-1 {
+    background-color: #fd76a7;
+}
+
+.day-2 {
+    background-color: #1bb190;
+}
+
+.day-3 {
+    background-image: url(../assets/images/day-3.jpg);    
+}
+
+.lineup{
+    text-align: center;
+    padding: 0;
+}
+
+.date{
+    font-size: 28px;
+    color: #ffeecf;
+    margin-bottom: 48px;
+    line-height: 1;
+    text-align: center;
+}
+
+.lineup h2{
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.lineup p{
+    font-size: 21px;
+}
+
+.lineup li{
+    margin-bottom: 24px;
+}

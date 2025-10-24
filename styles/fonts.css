@@ -2,21 +2,28 @@
 here we're borrowing the coce snippet from css-tricks which provides modern (by still very wide) browser support  */
 
 @font-face {
-  font-family: "LunchType-Regular"; /* Reference name for the font */
-  src: url("../assets/fonts/lunchtype22-regular-webfont.woff2") format("woff2"),  
-       url("../assets/fonts/lunchtype22-regular-webfont.woff") format("woff"),
-       url("../assets/fonts/lunchtype22-regular-webfont.ttf") format("truetype"); /* Fallback for older browsers */
+  font-family: "LunchType-Regular";
+  /* Reference name for the font */
+  src: url("../assets/fonts/lunchtype22-regular-webfont.woff2") format("woff2"),
+    url("../assets/fonts/lunchtype22-regular-webfont.woff") format("woff"),
+    url("../assets/fonts/lunchtype22-regular-webfont.ttf") format("truetype");
+  /* Fallback for older browsers */
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "LunchType-Medium", sans-serif; /* Reference name for the font */
-  src: url("../assets/fonts/lunchtype22-medium-webfont.woff2") format("woff2"),  
-       url("../assets/fonts/lunchtype22-medium-webfont.woff") format("woff"),
-       url("../assets/fonts/lunchtype22-medium-webfont.ttf") format("truetype"); /* Fallback for older browsers */
+  font-family: "LunchType-Medium", sans-serif;
+  /* Reference name for the font */
+  src: url("../assets/fonts/lunchtype22-medium-webfont.woff2") format("woff2"),
+    url("../assets/fonts/lunchtype22-medium-webfont.woff") format("woff"),
+    url("../assets/fonts/lunchtype22-medium-webfont.ttf") format("truetype");
+  /* Fallback for older browsers */
   font-weight: normal;
 }
 
-.marquee{
+.marquee,
+.lunch-medium,
+.date,
+.lineup h2 {
   font-family: "LunchType-Medium", sans-serif;
 }
