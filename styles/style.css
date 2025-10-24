@@ -1,0 +1,48 @@
+.section {
+    min-height: 100vh;
+    /* this enables flexbox (the modern layout mode in css) */
+    display: flex;
+
+}
+
+/* hier we have a little helper class that adds padding to our sections that can be reused and just doen one thing */
+.section-pad {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.container {
+    max-width: 810px;
+    /* this will center our box like magic */
+    margin: auto;
+}
+
+.intro {
+    background-image: url(../assets/images/intro.jpg);
+    color: white;
+}
+
+.intro p {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+    max-width: 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/* another helper/utility class */
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
