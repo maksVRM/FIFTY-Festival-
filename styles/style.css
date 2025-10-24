@@ -125,6 +125,7 @@ body {
     /* so our shapes position in relation to our day sections  */
     position: relative;
     text-align: center;
+    overflow: hidden;
 }
 
 .day .container{

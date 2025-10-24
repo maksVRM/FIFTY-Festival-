@@ -15,7 +15,8 @@
  }
 
  .circle {
-    animation: pulsate 3s infinite;
+    /* будем писать на JS */
+    /* animation: pulsate 3s infinite; */
      height: 93px;
      width: 93px;
      background-color: #ffeecf;
