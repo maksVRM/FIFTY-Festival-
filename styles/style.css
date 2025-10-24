@@ -46,3 +46,30 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translate(0);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.appear{
+    /* here we set the opcity as a starting point */
+    opacity: 0;
+    /* here we include the animation name */
+    animation-name: fadeIn;
+    /* set a duration and delay */
+    animation-duration: 3s;
+    animation-delay: 2s;
+    /* make sure the end state stays the same */
+    animation-fill-mode: forwards;
+}
