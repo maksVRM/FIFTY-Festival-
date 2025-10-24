@@ -121,6 +121,18 @@ body {
     mix-blend-mode: difference;
 }
 
+.day{
+    /* so our shapes position in relation to our day sections  */
+    position: relative;
+    text-align: center;
+}
+
+.day .container{
+    /* this will force our content to display on top of shapes */
+    position: relative;
+    z-index: 2;
+}
+
 .day-1 {
     background-color: #fd76a7;
 }
@@ -134,7 +146,7 @@ body {
 }
 
 .lineup{
-    text-align: center;
+    /* text-align: center; */
     padding: 0;
 }
 
