@@ -17,9 +17,6 @@ here we're borrowing the coce snippet from css-tricks which provides modern (by 
   font-weight: normal;
 }
 
-body{
-    font-family: "LunchType-Regular", sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 0;
+.marquee{
+  font-family: "LunchType-Medium", sans-serif;
 }

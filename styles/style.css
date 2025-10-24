@@ -1,8 +1,15 @@
+body {
+    font-family: "LunchType-Regular", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
 .section {
     min-height: 100vh;
     /* this enables flexbox (the modern layout mode in css) */
     display: flex;
-
+    position: relative;
 }
 
 /* hier we have a little helper class that adds padding to our sections that can be reused and just doen one thing */
@@ -47,7 +54,7 @@
     background-repeat: no-repeat;
 }
 
-@keyframes fadeIn{
+@keyframes fadeIn {
     0% {
         opacity: 0;
         transform: translateY(20px);
@@ -62,7 +69,7 @@
     }
 }
 
-.appear{
+.appear {
     /* here we set the opcity as a starting point */
     opacity: 0;
     /* here we include the animation name */
@@ -72,4 +79,44 @@
     animation-delay: 2s;
     /* make sure the end state stays the same */
     animation-fill-mode: forwards;
+}
+
+.marquee {
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100%;
+    /* each letter will be 6% of the viewpost width (vw) */
+    font-size: 5vw;
+    line-height: 1;
+    /* this will stop the long text from causing scroll bars by hanging outside of the marquee box area */
+    overflow: hidden;
+
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-3000vw);
+    }
+}
+
+.marquee span {
+    /* this is the shorthand (brief) version of the animation css rule  */
+    animation: moveLeft 200s infinite;
+    /* this will ensure the text stays all on the same line  */
+    white-space: nowrap;
+    /* our span is inline by default so here we tell is to be block */
+    display: block;
+    /* this will let us add our animation */
+    position: relative;
+}
+
+.mix-difference {
+    /* our mix blend mode allows us to mix the current layer's
+        styles/color with that of what's behind it to create some really cool effects */
+    mix-blend-mode: difference;
 }
