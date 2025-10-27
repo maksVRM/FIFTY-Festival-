@@ -31,7 +31,7 @@ const circles = document.querySelectorAll('.circle')
 // circles returns us an array so we need to loop through it 
 // inside of the forEach we get access to each individual element
 // along with it's index
-circles.forEach(function (circle, index) {
+circles.forEach((circle, index) => {
 
     // in here we get acces to each one as 'circle'
     circle.animate([
@@ -52,8 +52,7 @@ circles.forEach(function (circle, index) {
 const squiggles = document.querySelectorAll('.squiggle')
 
 
-
-squiggles.forEach(function (squiggle, index) {
+squiggles.forEach((squiggle, index) => {
     // gets a random number between 0 and 45 using our random function
     // from stackoverflow
     const randomNumber = random(0, 45)
@@ -65,7 +64,8 @@ squiggles.forEach(function (squiggle, index) {
         // keyframes
         { transform: 'rotate(0)' },
         // here we join our random number into our rotate property
-        { transform: 'rotate(' + randomNumber + 'deg)' },
+        // { transform: 'rotate(' + randomNumber + 'deg)' },
+        { transform: `rotate(${randomNumber}deg)` },
         { transform: 'rotate(0)' }
     ], {
         // timing options
@@ -74,4 +74,52 @@ squiggles.forEach(function (squiggle, index) {
         duration: 5000,
         iterations: Infinity
     });
+})
+
+
+
+// here we want to detect when our .section enters the viewport
+// when it does, we want to add a class of 'in-viewport' , and
+// when it exits we want to remove it again
+inView('.section')
+    .on('enter', section => {
+        // classList.add is the same as jQury's .addClass() method
+        // but the vanilaa JS version
+        section.classList.add('in-viewport')
+    })
+    .on("exit", section => {
+        section.classList.remove('in-viewport')
+    });
+
+// here we set the class  to add only once we have scroll 0.2 of 
+// our section into the viewport 
+inView.threshold(0.2)
+
+
+// 1. we want to select all of our sections and loop through them 
+// 2. in each section we want to grab the artists and shapes
+// 3. for both of these we want to add transition-delay effects
+// 4. we want to make sure our shapes only fade in after our artists
+
+const sections = document.querySelectorAll('.section')
+sections.forEach((section, index) => {
+    // here we use querySelectorAll on our 'section' to only find 
+    // elements inside of our section vs. our entire page 
+    const artists = section.querySelectorAll('.lineup li')
+    const shapes = section.querySelectorAll('.shape')
+
+    artists.forEach((artist, index) => {
+        const delay = index * 100
+        //artist.style.transitionDelay = '${delay} ms' - означает одно и тоже
+        artist.style.transitionDelay = delay + 'ms' //означает одно и тоже
+    })
+
+    // => run a function
+    shapes.forEach((shape, index) => {
+        // we are setting our delay up to only start once all of our 
+        // artists have faded in using the .length property 
+        const delay = (artists.length + index) * 100
+        shape.style.transitionDelay = delay + 'ms'
+    })
+
 })
