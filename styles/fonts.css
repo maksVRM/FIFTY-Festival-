@@ -24,6 +24,9 @@ here we're borrowing the coce snippet from css-tricks which provides modern (by 
 .marquee,
 .lunch-medium,
 .date,
-.lineup h2 {
+.lineup h2,
+.button,
+.register h2,
+.submit {
   font-family: "LunchType-Medium", sans-serif;
 }
