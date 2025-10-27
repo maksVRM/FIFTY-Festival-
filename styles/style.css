@@ -121,14 +121,14 @@ body {
     mix-blend-mode: difference;
 }
 
-.day{
+.day {
     /* so our shapes position in relation to our day sections  */
     position: relative;
     text-align: center;
     overflow: hidden;
 }
 
-.day .container{
+.day .container {
     /* this will force our content to display on top of shapes */
     position: relative;
     z-index: 2;
@@ -143,15 +143,15 @@ body {
 }
 
 .day-3 {
-    background-image: url(../assets/images/day-3.jpg);    
+    background-image: url(../assets/images/day-3.jpg);
 }
 
-.lineup{
+.lineup {
     /* text-align: center; */
     padding: 0;
 }
 
-.date{
+.date {
     font-size: 28px;
     color: #ffeecf;
     margin-bottom: 48px;
@@ -159,16 +159,35 @@ body {
     text-align: center;
 }
 
-.lineup h2{
+.lineup h2 {
     font-size: 56px;
     line-height: 1;
     margin-bottom: 6px;
 }
 
-.lineup p{
+.lineup p {
     font-size: 21px;
 }
 
-.lineup li{
+.lineup li {
     margin-bottom: 24px;
+}
+
+.scroll-to {
+    position: absolute;
+    left: 50%;
+    bottom: 3vh;
+
+    width: 64px;
+    height: 32px;
+
+    background-image: url(../assets/images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: translateX(-50%);
+}
+
+.scroll-to-intro {
+    background-image: url(../assets/images/down-arrow-light.svg);
 }

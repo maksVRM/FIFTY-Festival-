@@ -121,5 +121,35 @@ sections.forEach((section, index) => {
         const delay = (artists.length + index) * 100
         shape.style.transitionDelay = delay + 'ms'
     })
+})
+
+
+//1. whenever we click a .js-scroll link, we want to a run a function
+//2. we want to stop the link from jumping straight to our section (it's default behaviour)
+//3. we want to find our the href attribute and then grab that element 
+//4. than scroll to it using scrollIntoView
+
+const scrollLinks = document.querySelectorAll('.js-scroll')
+
+scrollLinks.forEach(link => {
+    // addEventListener is just same as jQuery's .on()
+    // we can listen for events on elements add then run a function
+    // вместо этого function () используем это () => 
+    link.addEventListener('click', (event) => {
+        // using the event keyword we het an access to a snapshot of what 
+        // what happend when we clicked on our link 
+
+        // this is equivalent to return false in jQuery
+        event.preventDefault()
+
+        // here we grab the href attribute from our link 
+        const href = link.getAttribute('href')
+        // here we use the new scrollIntoView feature to scroll to 
+        // our desired element in a smooth fashion 
+        document.querySelector(href).scrollIntoView({
+            behavior: 'smooth'
+        })
+
+    })
 
 })
